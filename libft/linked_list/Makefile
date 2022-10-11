@@ -6,7 +6,7 @@
 #    By: alvachon <alvachon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/09 21:13:54 by alvachon          #+#    #+#              #
-#    Updated: 2022/10/10 14:45:08 by alvachon         ###   ########.fr        #
+#    Updated: 2022/10/11 14:09:29 by alvachon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,8 @@ FLAGS = -Wall -Wextra -Werror
 SRC = $(LSTCREATE_C) $(LSTUTIL_C) $(LSTCURL_C)
 OBJ_DIR = _objFiles
 OBJ = *.o
+
+HEAD = _include/linkedlist.h
 
 # 1. (4) LST_NEW, LST_ADD_FRONT, LST_ADD_BACK, LST_LAST
 LSTCREATE_C = srcs/create_node_4.c
@@ -28,6 +30,7 @@ LSTCURL_C = srcs/curl_action_2.c
 NONE='\033[0m'
 GRAY='\033[2;37m'
 CURSIVE='\033[3m'
+YELL= '\033[0;33m'
 
 # RULES
 all : $(NAME)
@@ -42,17 +45,19 @@ $(OBJ): $(SRC)
 	@mv $(OBJ) $(OBJ_DIR)
 
 clean:
-	@echo $(CURSIVE)$(GRAY) "     - Cleaning Libft..." $(NONE)
+	@echo $(NONE)$(GRAY) "Linked List :" $(NONE)
+	@echo $(CURSIVE)"     - Cleaning..." $(NONE)
 	@rm -f $(OBJ) $(OBJ_DIR)/$(OBJ)
 	@rm -rf $(OBJ_DIR)
 
 fclean: clean
-	@echo $(CURSIVE)$(GRAY) "     - Removing $(NAME)..." $(NONE)
+	@echo $(NONE)$(GRAY) "Linked List :" $(NONE)
+	@echo $(CURSIVE)"     - Removing..." $(NONE)
 	@rm -f $(NAME)
 
 re: fclean all
 
 norm:
-	@echo "\n   Libft norminette..." $(GRAY)$(CURSIVE)
-	@norminette $(SRC) *.h */*.h
+	@echo $(NONE)$(GRAY) "Linked List :" $(NONE)
+	@norminette $(SRC) $(HEAD)
 	@echo ""$(NONE)

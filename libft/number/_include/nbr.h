@@ -6,14 +6,14 @@
 /*   By: alvachon <alvachon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 22:19:41 by alvachon          #+#    #+#             */
-/*   Updated: 2022/10/10 18:08:54 by alvachon         ###   ########.fr       */
+/*   Updated: 2022/10/11 13:31:26 by alvachon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef NBR_H
 # define NBR_H
 
-#include <stdlib.h>
+# include <stdlib.h>
 
 /* * * * * * * * * * * * * * conversion_4.c*/
 
@@ -30,10 +30,7 @@ char	*ft_itoa(int nb);
 long	ft_atol(const char *str);
 
 /* * * * * * * * helper_2.c */
-
-/**/
-int	ft_isdigit(int c);
-/**/
-int	ft_isspace(int c);
+int		ft_isdigit(int c);
+int		ft_isspace(int c);
 
 #endif

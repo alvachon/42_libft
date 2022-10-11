@@ -6,11 +6,11 @@
 /*   By: alvachon <alvachon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 12:42:36 by alvachon          #+#    #+#             */
-/*   Updated: 2022/10/10 14:24:27 by alvachon         ###   ########.fr       */
+/*   Updated: 2022/10/11 13:36:09 by alvachon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../_include/string.h"
+#include "../_include/string.h"
 
 size_t	ft_strlen(const char *s)
 {

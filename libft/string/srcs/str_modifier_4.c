@@ -6,11 +6,11 @@
 /*   By: alvachon <alvachon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 13:03:07 by alvachon          #+#    #+#             */
-/*   Updated: 2022/10/10 15:12:47 by alvachon         ###   ########.fr       */
+/*   Updated: 2022/10/11 13:36:44 by alvachon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../_include/string.h"
+#include "../_include/string.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

@@ -6,11 +6,11 @@
 /*   By: alvachon <alvachon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 12:55:12 by alvachon          #+#    #+#             */
-/*   Updated: 2022/10/10 14:02:00 by alvachon         ###   ########.fr       */
+/*   Updated: 2022/10/11 13:35:10 by alvachon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../_include/string.h"
+#include "../_include/string.h"
 
 char	**ft_freeall(char **str)
 {
