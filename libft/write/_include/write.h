@@ -6,14 +6,14 @@
 /*   By: alvachon <alvachon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 22:08:02 by alvachon          #+#    #+#             */
-/*   Updated: 2022/10/10 18:09:42 by alvachon         ###   ########.fr       */
+/*   Updated: 2022/10/11 13:45:29 by alvachon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef WRITE_H
 # define WRITE_H
 
-#include <unistd.h>
+# include <unistd.h>
 
 /* * * * * * * * * * * * * * 00_write.c*/
 /*                                    */

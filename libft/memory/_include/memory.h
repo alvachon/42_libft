@@ -6,15 +6,15 @@
 /*   By: alvachon <alvachon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 21:58:30 by alvachon          #+#    #+#             */
-/*   Updated: 2022/10/10 14:36:41 by alvachon         ###   ########.fr       */
+/*   Updated: 2022/10/11 13:29:24 by alvachon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MEMORY_H
 # define MEMORY_H
 
-#include <stdlib.h>
-#include <stdint.h>
+# include <stdlib.h>
+# include <stdint.h>
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * heap_alloc_3.c */
 
@@ -42,6 +42,5 @@ The memchr() function returns a pointer to the byte located,
  or NULL if no such byte exists within n bytes.Strchr seems
  to be better                                           */
 void	*ft_memchr(const void *s, int c, size_t n);
-
 
 #endif

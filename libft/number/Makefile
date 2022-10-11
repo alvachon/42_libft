@@ -6,7 +6,7 @@
 #    By: alvachon <alvachon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/09 17:12:33 by alvachon          #+#    #+#              #
-#    Updated: 2022/10/10 18:09:14 by alvachon         ###   ########.fr        #
+#    Updated: 2022/10/11 14:09:26 by alvachon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,8 @@ FLAGS = -Wall -Wextra -Werror
 SRC = $(CONVERSION_C) $(HELP_C)
 OBJ_DIR = _objFiles
 OBJ = *.o
+
+HEAD = _include/nbr.h
 
 # 1. (4) NB_LEN - ATOI - ITOA - ATOL
 CONVERSION_C = srcs/conversion_4.c
@@ -27,6 +29,7 @@ HELP_C = srcs/helper_2.c
 NONE='\033[0m'
 GRAY='\033[2;37m'
 CURSIVE='\033[3m'
+YELL= '\033[0;33m'
 
 # RULES
 all : $(NAME)
@@ -41,17 +44,19 @@ $(OBJ): $(SRC)
 	@mv $(OBJ) $(OBJ_DIR)
 
 clean:
-	@echo $(CURSIVE)$(GRAY) "     - Cleaning number..." $(NONE)
+	@echo $(NONE)$(GRAY) "Conversion :" $(NONE)
+	@echo $(CURSIVE)"     - Cleaning ..." $(NONE)
 	@rm -f $(OBJ) $(OBJ_DIR)/$(OBJ)
 	@rm -rf $(OBJ_DIR)
 
 fclean: clean
-	@echo $(CURSIVE)$(GRAY) "     - Removing $(NAME)..." $(NONE)
+	@echo $(NONE)$(GRAY) "Conversion :" $(NONE)
+	@echo $(CURSIVE)"     - Removing ..." $(NONE)
 	@rm -f $(NAME)
 
 re: fclean all
 
 norm:
-	@echo "\n   Libft norminette..." $(GRAY)$(CURSIVE)
-	@norminette $(SRC) *.h */*.h
+	@echo $(NONE)$(GRAY) "Conversion :" $(NONE)
+	@norminette $(SRC) $(HEAD)
 	@echo ""$(NONE)

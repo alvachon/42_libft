@@ -6,14 +6,14 @@
 /*   By: alvachon <alvachon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 22:24:02 by alvachon          #+#    #+#             */
-/*   Updated: 2022/10/10 14:45:13 by alvachon         ###   ########.fr       */
+/*   Updated: 2022/10/11 13:25:30 by alvachon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LINKEDLIST_H
 # define LINKEDLIST_H
 
-#include <stdlib.h>
+# include <stdlib.h>
 
 typedef struct s_node
 {
@@ -65,7 +65,7 @@ void	ft_lstdelone(t_node *lst, void (*del)(void*));
 	lst: memory Adress of an element.
 	f: Memory adress of a function.. 
 	del: Memory adress to delete content.                              */
-t_node *ft_lstmap(t_node *lst, void *(*f)(void *), void (*del)(void *));
+t_node	*ft_lstmap(t_node *lst, void *(*f)(void *), void (*del)(void *));
 
 /*Iteration on linked list 'lst' and apply function f on each elements.
 lst: Memory adress of an element.

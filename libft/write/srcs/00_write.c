@@ -6,11 +6,11 @@
 /*   By: alvachon <alvachon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 23:29:04 by alvachon          #+#    #+#             */
-/*   Updated: 2022/10/10 18:09:50 by alvachon         ###   ########.fr       */
+/*   Updated: 2022/10/11 13:44:52 by alvachon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../_include/write.h"
+#include "../_include/write.h"
 
 size_t	ft_strlen(const char *s)
 {

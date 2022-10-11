@@ -6,11 +6,11 @@
 /*   By: alvachon <alvachon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 23:55:07 by alvachon          #+#    #+#             */
-/*   Updated: 2022/10/10 15:15:24 by alvachon         ###   ########.fr       */
+/*   Updated: 2022/10/11 13:34:52 by alvachon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../_include/string.h"
+#include "../_include/string.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

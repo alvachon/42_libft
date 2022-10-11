@@ -6,7 +6,7 @@
 /*   By: alvachon <alvachon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 11:13:36 by alvachon          #+#    #+#             */
-/*   Updated: 2022/10/10 14:55:50 by alvachon         ###   ########.fr       */
+/*   Updated: 2022/10/11 13:42:08 by alvachon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ t_bool	ft_isascii(int c)
 
 t_bool	ft_isprint(int c)
 {
-	if (ft_isalpha(c)|| ft_issymbol(c) || ft_isdigit(c))
+	if (ft_isalpha(c) || ft_issymbol(c) || ft_isdigit(c))
 		return (TRUE);
 	else
 		return (FALSE);

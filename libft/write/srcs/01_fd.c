@@ -6,11 +6,11 @@
 /*   By: alvachon <alvachon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 23:33:54 by alvachon          #+#    #+#             */
-/*   Updated: 2022/10/10 00:46:29 by alvachon         ###   ########.fr       */
+/*   Updated: 2022/10/11 13:45:13 by alvachon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../_include/write.h"
+#include "../_include/write.h"
 
 void	ft_putchar_fd(char c, int fd)
 {

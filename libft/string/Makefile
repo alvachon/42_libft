@@ -6,7 +6,7 @@
 #    By: alvachon <alvachon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/10 00:24:14 by alvachon          #+#    #+#              #
-#    Updated: 2022/10/10 15:12:49 by alvachon         ###   ########.fr        #
+#    Updated: 2022/10/11 14:10:48 by alvachon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,10 +15,12 @@ FLAGS = -Wall -Wextra -Werror
 
 # 7 files
 SRC = $(STRALLOC_C) $(STRCOMPARE_C) $(STRCREATE_C) $(STRFREE_C) $(STRINFO_C)\
-		$(STRLOC_C) $(STRMOD_C)
+		$(STRLOC_C) $(STRMOD_C) $(STRHELP_C)
 
 OBJ_DIR = _objFiles
 OBJ = *.o
+
+HEAD = _include/string.h
 
 # 1. (3) STRDUP, STRNDUP, STRLCPY, MEMCPY
 STRALLOC_C = srcs/str_alloc_3.c
@@ -41,10 +43,14 @@ STRLOC_C = srcs/str_locate_3.c
 # 7. (4) STRUPCASE, STRLCAT, STRITERI, STRMAPI
 STRMOD_C = srcs/str_modifier_4.c
 
+# 8. (2) CALLOC, MEMSET
+STRHELP_C = srcs/str_helper_1.c
+
 # COLORS
 NONE='\033[0m'
 GRAY='\033[2;37m'
 CURSIVE='\033[3m'
+YELL= '\033[0;33m'
 
 # RULES
 all : $(NAME)
@@ -59,17 +65,19 @@ $(OBJ): $(SRC)
 	@mv $(OBJ) $(OBJ_DIR)
 
 clean:
-	@echo $(CURSIVE)$(GRAY) "     - Cleaning number..." $(NONE)
+	@echo $(NONE)$(GRAY) "String :" $(NONE)
+	@echo $(CURSIVE)"     - Cleaning ..." $(NONE)
 	@rm -f $(OBJ) $(OBJ_DIR)/$(OBJ)
 	@rm -rf $(OBJ_DIR)
 
 fclean: clean
-	@echo $(CURSIVE)$(GRAY) "     - Removing $(NAME)..." $(NONE)
+	@echo $(NONE)$(GRAY) "String :" $(NONE)
+	@echo $(CURSIVE)"     - Removing ..." $(NONE)
 	@rm -f $(NAME)
 
 re: fclean all
 
 norm:
-	@echo "\n   Libft norminette..." $(GRAY)$(CURSIVE)
-	@norminette $(SRC) *.h */*.h
+	@echo $(NONE)$(GRAY) "String :" $(NONE)
+	@norminette $(SRC) $(HEAD)
 	@echo ""$(NONE)

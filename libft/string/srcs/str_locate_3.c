@@ -6,11 +6,11 @@
 /*   By: alvachon <alvachon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 23:40:43 by alvachon          #+#    #+#             */
-/*   Updated: 2022/10/10 14:10:24 by alvachon         ###   ########.fr       */
+/*   Updated: 2022/10/11 13:36:27 by alvachon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../_include/string.h"
+#include "../_include/string.h"
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
@@ -69,4 +69,3 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return ((char *)s);
 }
-

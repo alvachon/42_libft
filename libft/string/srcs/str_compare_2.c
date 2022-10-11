@@ -6,13 +6,13 @@
 /*   By: alvachon <alvachon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 01:51:39 by alvachon          #+#    #+#             */
-/*   Updated: 2022/10/10 15:10:11 by alvachon         ###   ########.fr       */
+/*   Updated: 2022/10/11 13:34:18 by alvachon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../_include/string.h"
+#include "../_include/string.h"
 
-int		ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	unsigned int	i;
 	unsigned char	*ps1;
@@ -40,4 +40,3 @@ int	ft_strcmp(char *s1, char *s2)
 	}
 	return (s1[i] - s2[i]);
 }
-

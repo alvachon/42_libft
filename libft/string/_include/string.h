@@ -6,7 +6,7 @@
 /*   By: alvachon <alvachon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 13:22:20 by alvachon          #+#    #+#             */
-/*   Updated: 2022/10/10 15:15:15 by alvachon         ###   ########.fr       */
+/*   Updated: 2022/10/11 13:40:20 by alvachon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,10 +45,10 @@ void	*ft_memcpy(void *dst, const void *src, size_t len);
 /* Compare s1 and s2 no more than N character. After '\0' = Not compared.
   Return an int >, =, or < than 0
  The comparison is done using unsigned char, so that `\200' > than `\0' */
-int	ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 /*Compare 2 strings and return the len of the suite similar characters*/
-int	ft_strcmp(char *s1, char *s2);
+int		ft_strcmp(char *s1, char *s2);
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * str_create_4.c*/
 
@@ -124,8 +124,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
  by 'f' ton transform if necessary                           */
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
-/* * * * helper_1.c*/
-/**/
+/* * * * * * * * * * * * * * * * * * *helper_1.c */
+void	*ft_memset(void *b, int c, size_t len);
 void	*ft_calloc(size_t count, size_t size);
 
 #endif

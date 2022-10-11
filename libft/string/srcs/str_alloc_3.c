@@ -6,11 +6,11 @@
 /*   By: alvachon <alvachon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 12:57:13 by alvachon          #+#    #+#             */
-/*   Updated: 2022/10/10 13:42:18 by alvachon         ###   ########.fr       */
+/*   Updated: 2022/10/11 13:33:41 by alvachon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../_include/string.h"
+#include "../_include/string.h"
 
 char	*ft_strdup(const char *str)
 {
@@ -66,7 +66,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t len)
 			*dst_ptr++ = *src_ptr++;
 	}
 	return (dst);
-};
+}
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
@@ -82,4 +82,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	}
 	return (srcsize);
 }
-

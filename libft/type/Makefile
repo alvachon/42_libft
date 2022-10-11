@@ -6,7 +6,7 @@
 #    By: alvachon <alvachon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/09 17:12:33 by alvachon          #+#    #+#              #
-#    Updated: 2022/10/10 15:17:55 by alvachon         ###   ########.fr        #
+#    Updated: 2022/10/11 14:09:45 by alvachon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,8 @@ FLAGS = -Wall -Wextra -Werror
 SRC = $(ISASC_C) $(ASCTABLE_C) $(ASCMOD_C) $(ISINT_C)
 OBJ_DIR = _objFiles
 OBJ = *.o
+
+HEAD = _include/typemem.h
 
 # 1. (2) IS_ASCCI, IS_PRINT
 ISASC_C = srcs/01_isascci.c
@@ -30,6 +32,7 @@ ISINT_C = srcs/04_isint.c
 NONE='\033[0m'
 GRAY='\033[2;37m'
 CURSIVE='\033[3m'
+YELL= '\033[0;33m'
 
 # RULES
 all : $(NAME)
@@ -44,17 +47,19 @@ $(OBJ): $(SRC)
 	@mv $(OBJ) $(OBJ_DIR)
 
 clean:
-	@echo $(CURSIVE)$(GRAY) "     - Cleaning Libft..." $(NONE)
+	@echo $(NONE)$(GRAY) "Type :" $(NONE)
+	@echo $(CURSIVE)"     - Cleaning ..." $(NONE)
 	@rm -f $(OBJ) $(OBJ_DIR)/$(OBJ)
 	@rm -rf $(OBJ_DIR)
 
 fclean: clean
-	@echo $(CURSIVE)$(GRAY) "     - Removing $(NAME)..." $(NONE)
+	@echo $(NONE)$(GRAY) "Type :" $(NONE)
+	@echo $(CURSIVE)"     - Removing ..." $(NONE)
 	@rm -f $(NAME)
 
 re: fclean all
 
 norm:
-	@echo "\n   Libft norminette..." $(GRAY)$(CURSIVE)
-	@norminette $(SRC) *.h */*.h
+	@echo $(NONE)$(GRAY) "Type :" $(NONE)
+	@norminette $(SRC) $(HEAD)
 	@echo ""$(NONE)
