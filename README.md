@@ -1,4 +1,5 @@
-# LIBFT - [![alvachon's 42 Libft Score](https://badge42.vercel.app/api/v2/clb9zrpvt00250fl97rqy9hie/project/2544750)](https://github.com/JaeSeoKim/badge42)
+# LIBFT  ![alvachon's 42 Libft Score](https://badge42.vercel.app/api/v2/clb9zrpvt00250fl97rqy9hie/project/2544750)  ![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
+
 The first project at 42 quebec is to create a static library with original and homemade version of pre-existing functions in the C library.\
 **Notice** - I did some edits for my needs, this project is not compliant anymore.
 
