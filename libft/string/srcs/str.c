@@ -1,16 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   str_create_4.c                                     :+:      :+:    :+:   */
+/*   str.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alvachon <alvachon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 23:55:07 by alvachon          #+#    #+#             */
-/*   Updated: 2022/10/11 13:34:52 by alvachon         ###   ########.fr       */
+/*   Updated: 2022/12/07 16:13:28 by alvachon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../_include/string.h"
+#include "../_include/str.h"
+
+char	**ft_freeall(char **str)
+{
+	size_t	i;
+
+	i = 0;
+	while (str[i])
+	{
+		free(str[i]);
+		i++;
+	}
+	free(str);
+	return (NULL);
+}
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

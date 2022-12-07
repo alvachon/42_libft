@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   str_modifier_4.c                                   :+:      :+:    :+:   */
+/*   str_4.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alvachon <alvachon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 13:03:07 by alvachon          #+#    #+#             */
-/*   Updated: 2022/10/11 13:36:44 by alvachon         ###   ########.fr       */
+/*   Updated: 2022/12/07 15:47:23 by alvachon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../_include/string.h"
+#include "../_include/str.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -50,26 +50,6 @@ char	*ft_strupcase(char *str)
 	return (str);
 }
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
-{
-	size_t	len_dest;
-	size_t	len_src;
-	size_t	i;
-
-	len_dest = ft_strlen(dst);
-	len_src = ft_strlen(src);
-	i = 0;
-	if (dstsize <= len_dest)
-		return (len_src + dstsize);
-	while (src[i] && len_dest + i < dstsize - 1)
-	{
-		dst[len_dest + i] = src[i];
-		i++;
-	}
-	dst[len_dest + i] = '\0';
-	return (len_src + len_dest);
-}
-
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	int	i;
@@ -82,4 +62,31 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		f(i, &s[i]);
 		i++;
 	}
+}
+
+size_t	ft_strlen(const char *s)
+{
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	return (i);
+}
+
+size_t	ft_wordcount(char const *s, char c)
+{
+	size_t	array_size;
+	size_t	i;
+
+	i = 0;
+	array_size = 0;
+	while (s[i] != '\0')
+	{
+		if ((i == 0 && s[i] != c) || \
+		(s[i] == c && s[i + 1] != '\0' && s[i + 1] != c))
+			array_size++;
+		i++;
+	}
+	return (array_size);
 }

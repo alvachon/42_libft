@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   str_alloc_3.c                                      :+:      :+:    :+:   */
+/*   str_1.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alvachon <alvachon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 12:57:13 by alvachon          #+#    #+#             */
-/*   Updated: 2022/10/11 13:33:41 by alvachon         ###   ########.fr       */
+/*   Updated: 2022/12/07 15:41:24 by alvachon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../_include/string.h"
+#include "../_include/str.h"
 
 char	*ft_strdup(const char *str)
 {
@@ -81,4 +81,24 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		dst[dstsize -1] = '\0';
 	}
 	return (srcsize);
+}
+
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+{
+	size_t	len_dest;
+	size_t	len_src;
+	size_t	i;
+
+	len_dest = ft_strlen(dst);
+	len_src = ft_strlen(src);
+	i = 0;
+	if (dstsize <= len_dest)
+		return (len_src + dstsize);
+	while (src[i] && len_dest + i < dstsize - 1)
+	{
+		dst[len_dest + i] = src[i];
+		i++;
+	}
+	dst[len_dest + i] = '\0';
+	return (len_src + len_dest);
 }
