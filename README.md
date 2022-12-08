@@ -32,7 +32,6 @@ make
 I will invite you to check the [master makefile](https://github.com/alvachon/42_libft/blob/main/Makefile) and one of the [sub makefile](https://github.com/alvachon/42_libft/blob/main/libft/write/Makefile) to check other useful calls that you can make. 
 
 ## To do list
-* Add get_next_line
 * Add ft_printf
 * Add my doubly_circular_linked_list
 * Add Readme files with notes for each type

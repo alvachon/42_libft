@@ -6,14 +6,14 @@
 #    By: alvachon <alvachon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/10 00:24:14 by alvachon          #+#    #+#              #
-#    Updated: 2022/12/07 16:17:10 by alvachon         ###   ########.fr        #
+#    Updated: 2022/12/08 18:22:17 by alvachon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = str.a
 FLAGS = -Wall -Wextra -Werror
 
-SRC = srcs/mem.c srcs/str_1.c srcs/str.c srcs/str_3.c srcs/str_4.c
+SRC = srcs/mem.c srcs/str_1.c srcs/str.c srcs/str_3.c srcs/str_4.c srcs/gnl.c
 
 OBJ_DIR = _objFiles
 OBJ = *.o
